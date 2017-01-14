@@ -1,0 +1,100 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    title #{title}
+    include stylesheets
+  body
+    #background
+      #page
+        #header
+          a.logo(href='index')
+            img(src='images/logo.jpg', height=100, width=100)
+            | #{company}
+          ul
+            if view == 'index'
+                li.selected
+                  a(href='index') home
+            else
+                li
+                  a(href='index') home
+
+            if view == 'blog'
+                li.selected
+                  a(href='blog') blog
+            else
+                li
+                  a(href='blog') blog
+
+            if view == 'rides'
+                li.selected
+                  a(href='rides') rides &amp; attractions
+            else
+                li
+                  a(href='rides') rides &amp; attractions
+
+            if view == 'about'
+                li.selected
+                  a(href='about') about
+            else
+                li
+                  a(href='about') about
+
+            if view == 'tickets'
+                li.selected
+                  a(href='tickets') tickets &amp; prices
+            else
+                li
+                  a(href='tickets') tickets &amp; prices
+
+            if view == 'contact'
+                li.selected
+                  a(href='contact') contact
+            else
+                li
+                  a(href='contact') contact
+
+        block content
+
+        #footer
+          div
+            div
+              h3 blog
+              p
+                a(href='blog')
+                  span december 2016
+                  | The Wildbunch has opened
+            div
+              h3 categories
+              ul.category
+                li
+                  a(href='index') home
+                li
+                  a(href='about') about
+                li
+                  a(href='rides') rides &amp; attractions
+                li
+                  a(href='blog') blog
+                li
+                  a(href='tickets') tickets &amp; prices
+                li
+                  a(href='contact') contact
+            div
+              h3 connect
+              ul.connect
+                li#facebook
+                  a(href='https://facebook.com/' + handle) facebook
+                li#twitter
+                  a(href='https://twitter.com/' + handle) twitter
+                li#instagram
+                  a(href='https://instagram.com/' + handle) instagram
+          p
+            | #{company} &copy; copyright 2016. All Rights Reserved.
+          br
+          p
+            | Designed by &nbsp;
+            a.designer_info(href='http://github.com/okibeogezi') Michael Ogezi
+            |  at &nbsp;
+            a.designer_info(href='http://makerloom-web.herokuapp.com') Makerloom
+
+          include scripts

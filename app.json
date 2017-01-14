@@ -1,0 +1,8 @@
+{
+    "name": "The Wildbunch Amusement Park Website",
+    "description": "Website for The Wildbunch Amusement Park",
+    "repository": "https://github.com/okibeogezi/thewildbunchng",
+    "logo": "https://raw.githubusercontent.com/okibeogezi/thewildbunchng/master/public/images/logo.jpg",
+    "keywords": ["The Wildbunch", "Amusement Park", "Nodejs"],
+    "image": "heroku/nodejs"
+}

@@ -1,0 +1,48 @@
+extend layout
+
+block content
+        #body
+          #figure
+            img(src='images/img_8.jpg', width=707, alt='')
+            a(href='tickets.html')
+              img(src='images/discounts.png', alt='')
+          #section
+            h1 rides and attractions
+            div
+              .article
+                p
+                  | No matter who you are there's a ride or attraction for you here at The Wildbunch. Check them out.
+                ul
+                  li
+                    a(href='rides.html')
+                      img(src='images/img_3.jpg', width=238, alt='')
+                    span Super Slides
+                  li
+                    #scroll-after-post
+                    a(href='rides.html')
+                      img(src='images/img_10.jpg', width=238, alt='')
+                    span Horse Rides
+              .aside
+                div
+                  h3 twitter updates
+                  ul
+                    li
+                      p
+                        a(href='https://twitter.com/' + handle) @#{handle}
+                        |  Come and have a great time at The Wildbunch today
+                    li
+                      p
+                        a(href='https://twitter.com/' + handle) @#{handle}
+                        |  There's many prizes to be won and fun to be had at The Wildbunch
+                div
+                  h3 newsletter
+                  p
+                    | Enter your email to join our newsletter.
+                  #sendmessage
+                    | You've been added. Thank you!
+                  #errormessage
+                    | Sorry. An error occured.
+                  #notsentmessage
+                    | We need your email to add you.
+                  form.newsletter_request(action='newsletter', method='post', role='form')
+                    input#email(type='email', required='required', name='email', placeholder='Email')

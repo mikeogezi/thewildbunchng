@@ -1,0 +1,55 @@
+extend layout
+
+block content
+        #body
+          #contact
+            h1 You can contact us here.
+            div
+              .figure
+                img(src='images/img_12.jpg', width=298 alt='')
+                p
+                  | At The Wildbunch there's always fun to be had by you and your family
+              .section
+                p
+                  | We always want to here from you. We have put some of our information here so that you can contact us easily.
+                  | If you prefer to do so, you can use the contact form below.
+                ul
+                  li
+                    span location
+                    | Behind Waye Foundation, Doi, Du.
+                  li
+                    span Email
+                    a(href='mailto:thewildbunchng@gmail.com') thewildbunchng@gmail.com
+                  #scroll-after-post
+                  li
+                    span call
+                    ul
+                      li.phone_num
+                        a(href='tel:+2349064485429') 0906 448 5429
+                      li.phone_num
+                        a(href='tel:+2348184557559') 0818 455 7559
+                  li
+                    span park hours
+                    | 1pm to 6pm daily.
+            #sendmessage
+              | Your message has been sent. Thank you!
+            #errormessage
+              | Sorry. An error occured while sending your message.
+            #notsentmessage
+              | You need to fill in all the boxes to send a message.
+            form.contact_form(action='contact', method='post', role='form')
+              span send a message
+              .information
+                label(for='name') your name:
+                input#name(type='text', name='name')
+
+                label(for='email') email address:
+                input#email(type='text', name='email')
+
+                label(for='subject') subject:
+                input#subject(type='text', name='subject')
+              div
+                label(for='message') message:
+                textarea#message(name='message')
+
+                input#send(type='submit', name='send', value='')
